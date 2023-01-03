@@ -26,7 +26,7 @@ let generateRandomNumber = () => {
   return numbers[indexNumbers];
 };
 let generateRandomPalo = () => {
-  let palo = ["diamond", "spade", "heart", "club"];
+  let palo = ["♦", "♥", "♠ ", "♣"];
   let indexPalo = Math.floor(Math.random() * palo.length);
   return palo[indexPalo];
 };
@@ -37,4 +37,17 @@ let dibujarCarta = () => {
   let palo2 = document.querySelector(".bottom-palo");
   palo1.innerHTML = paloGenerado;
   palo2.innerHTML = paloGenerado;
+  let numeroGenerado = generateRandomNumber();
+  let numerocentro = document.querySelector(".number");
+  numerocentro.innerHTML = numeroGenerado;
+  if (palo1.innerHTML === "♥" || palo1.innerHTML === "♦") {
+    palo1.style.color = "red";
+  } else {
+    palo1.style.color = "black";
+  }
+  if (palo2.innerHTML === "♥" || palo2.innerHTML === "♦") {
+    palo2.style.color = "red";
+  } else {
+    palo2.style.color = "black";
+  }
 };
