@@ -42,12 +42,16 @@ let dibujarCarta = () => {
   numerocentro.innerHTML = numeroGenerado;
   if (palo1.innerHTML === "♥" || palo1.innerHTML === "♦") {
     palo1.style.color = "red";
+    numerocentro.style.color = "red";
   } else {
     palo1.style.color = "black";
+    numerocentro.style.color = "black";
   }
   if (palo2.innerHTML === "♥" || palo2.innerHTML === "♦") {
     palo2.style.color = "red";
+    numerocentro.style.color = "red";
   } else {
     palo2.style.color = "black";
+    numerocentro.style.color = "black";
   }
 };
